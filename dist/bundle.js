@@ -70,8 +70,7 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-console.log('I am alive!');
-
+throw new Error("Module parse failed: /Users/connorray/career-development/React-Voting-App/voting-client/src/index.js Unexpected token (8:2)\nYou may need an appropriate loader to handle this file type.\n| \n| ReactDOM.render(\n|   <Voting pair={pair} />,\n|   document.getElementById('app')\n| );");
 
 /***/ }),
 /* 1 */
