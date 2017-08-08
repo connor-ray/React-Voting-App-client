@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: [
@@ -10,11 +11,14 @@ module.exports = {
     loaders: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      loader: 'react-hot-loader!babel-loader'
+      loader: 'react-hot!babel'
+    }, {
+      test: /\.css$/,
+      loader: 'style!css!postcss'
     }]
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['', '.js', '.jsx']
   },
   output: {
     path: __dirname + '/dist',
@@ -22,9 +26,13 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    hot: true
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
-  ]
+  ],
+  postcss: function () {
+    return [autoprefixer];
+  }
 };
