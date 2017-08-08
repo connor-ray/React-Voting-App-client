@@ -29,6 +29,7 @@
     ]
   },
   "dependencies": {
+    "autoprefixer-core": "^6.0.1",
     "immutable": "^3.8.1",
     "react": "^15.5.4",
     "react-addons-pure-render-mixin": "^15.5.2",
